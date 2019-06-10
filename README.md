@@ -1,11 +1,11 @@
-# C++ Command Line Calculator
+﻿# C++ Command Line Calculator
 
 This is an extremely simple calculator I made while learning C++.
 
 Download the repo, compile and run it:
 ```
-$git clone repo
-$cd repo
+$git clone https://github.com/christopher-siewert/cpp-calculator.git
+$cd cpp-calculator
 $make
 ```
 
