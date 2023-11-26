@@ -8,7 +8,7 @@ Scientific::Scientific() : Calculator() {}
 void Scientific::welcome() const
 {
     std::cout << "\n\nEnter one of:\n"
-    << "+, -, /, *, sqrt, square, change, setmem, printmem, sin, cos, log, tan, ln, abs, pow\n"
+    << "Basics: +, -, /, *, sqrt, square, log, ln, abs, pow\nTrigonometrie: sin, cos, tan, sec, csc, cot\nSystem: change, setmem, printmem\n"
     << "or exit\n";
 }
 
@@ -27,9 +27,21 @@ void Scientific::parseOperation(const std::string& input)
     {
         cos();
     }
+    else if (input == "cot")
+    {
+        cot();
+    }
+    else if (input == "csc")
+    {
+        csc();
+    }
+    else if (input == "sec")
+    {
+        sec();
+    }
     else if (input == "tan")
     {
-        cos();
+        tan();
     }
     else if (input == "ln")
     {
@@ -54,6 +66,30 @@ void Scientific::sin()
     std::cout << "Enter a number: ";
     std::cin >> a;
     result = std::sin(parseInput(a));
+    std::cout << "The result is " << result;
+}
+void Scientific::cot()
+{
+    std::string a;
+    std::cout << "Enter a number: ";
+    std::cin >> a;
+    result = 1/std::tan(parseInput(a));
+    std::cout << "The result is " << result;
+}
+void Scientific::csc()
+{
+    std::string a;
+    std::cout << "Enter a number: ";
+    std::cin >> a;
+    result = 1/std::sin(parseInput(a));
+    std::cout << "The result is " << result;
+}
+void Scientific::sec()
+{
+    std::string a;
+    std::cout << "Enter a number: ";
+    std::cin >> a;
+    result = 1/std::cos(parseInput(a));
     std::cout << "The result is " << result;
 }
 void Scientific::cos()
