@@ -16,6 +16,7 @@ public:
     void divide();
     void square();
     void sqrt();
+    void mod();
     void setMem();          /// Functions to get and set mem
     void printMem() const;
 
