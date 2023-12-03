@@ -15,6 +15,18 @@ void Calculator::add()
     result = parseInput(a) + parseInput(b);
     std::cout << "The result is " << result;
 }
+
+void Calculator::mod()
+{
+    std::string a, b;
+    std::cout << "Enter the first number: ";
+    std::cin >> a;
+    std::cout << "Enter the second number: ";
+    std::cin >> b;
+    result = ((int)parseInput(a) % (int)parseInput(b));
+    std::cout << "The result is " << result;
+}
+
 void Calculator::subtract()
 {
     std::string a, b;
@@ -92,7 +104,7 @@ double Calculator::parseInput(const std::string& input) const
 }
 void Calculator::welcome() const
 {
-    std::cout << "\n\nEnter an operation (+, -, /, *, sqrt, square, change, setmem, printmem) or exit\n";
+    std::cout << "\n\nEnter an operation (+, -, /, *, sqrt, mod ,square, change, setmem, printmem) or exit\n";
 }
 /// parse input and decide which member func to call
 void Calculator::parseOperation(const std::string& input)
@@ -116,6 +128,10 @@ void Calculator::parseOperation(const std::string& input)
     else if (input == "sqrt")
     {
         sqrt();
+    }
+    else if (input == "mod")
+    {
+        mod();
     }
     else if (input == "square")
     {
