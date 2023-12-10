@@ -25,6 +25,8 @@ public:
     void log();
     void abs();
     void pow();
+    void pythagoras();
+    void funktion();
 };
 
 #endif // SCIENTIFIC_H
