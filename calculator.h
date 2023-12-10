@@ -13,9 +13,11 @@ public:
     void add();             /// Functions to get user input and do operation
     void subtract();
     void multiply();
+    void pythagoras();
     void divide();
     void square();
     void sqrt();
+    void mod();
     void setMem();          /// Functions to get and set mem
     void printMem() const;
 

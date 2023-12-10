@@ -17,11 +17,16 @@ public:
     /// Extra operations not in simple calc
     void sin();
     void cos();
+    void sec();
+    void csc();
+    void cot();
     void tan();
     void ln();
     void log();
     void abs();
     void pow();
+    void pythagoras();
+    void funktion();
 };
 
 #endif // SCIENTIFIC_H
