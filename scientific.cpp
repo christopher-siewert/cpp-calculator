@@ -8,7 +8,7 @@ Scientific::Scientific() : Calculator() {}
 void Scientific::welcome() const
 {
     std::cout << "\n\nEnter one of:\n"
-    << "Basics: +, -, /, *, sqrt, square, log, ln, abs, pow\nTrigonometrie: sin, cos, tan, sec, csc, cot\nSystem: change, setmem, printmem\n"
+    << "Basics: +, -, /, *, sqrt, square, log, ln, abs, pow\nTrigonometrie: sin, cos, tan, sec, csc, cot\nSystem: change, setmem, printmem\npythagoras\nfunktion\n"
     << "or exit\n";
 }
 
@@ -59,6 +59,14 @@ void Scientific::parseOperation(const std::string& input)
     {
         pow();
     }
+    else if (input == "pythagoras")
+    {
+        pythagoras();
+    }
+    else if (input == "funktion")
+    {
+        funktion();
+    }
 }
 void Scientific::sin()
 {
@@ -67,6 +75,56 @@ void Scientific::sin()
     std::cin >> a;
     result = std::sin(parseInput(a));
     std::cout << "The result is " << result;
+}
+
+void Scientific::funktion()
+{
+    std::cout<<"choose one of these functions\n1: f(x)= x+9\n2: f(x)= x^2 + x+3\n";
+    std::string a;
+    std::cin >> a;
+    if(a == "1"){
+        std::cout<<"Enter x\n";
+        double x;
+        std::cin>> x;
+        result = x + 9;
+        std::cout << "The result is " << result;
+    }
+    else if (a == "2"){
+            std::cout<<"Enter x\n";
+            double x;
+            std::cin>> x;
+            result = x*x + x+3;
+            std::cout << "The result is " << result;
+    }
+}
+
+void Scientific::pythagoras()
+{
+    int choose = 0;
+    std::cout << "Please select \n (1) a and b known\n (2) a and c known\n";
+    std::cin >> choose;
+    if(choose == 1)
+    {
+    int a;
+    std::cout << "Enter a number: ";
+    std::cin >> a;
+    int b;
+    std::cout << "Enter b number: ";
+    std::cin >> b;
+    result = std::sqrt(a*a + b*b);
+    std::cout << "The result is " << result;
+    }
+    else if(choose == 2)
+    {
+    int a;
+    std::cout << "Enter a number: ";
+    std::cin >> a;
+    int c;
+    std::cout << "Enter c number: ";
+    std::cin >> c;
+    result = std::sqrt(a*a - c*c);
+    std::cout << "The result is " << result;
+    }
 }
 void Scientific::cot()
 {
